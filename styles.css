@@ -3,12 +3,54 @@ body{
 }
 
 .navbar{
-    background-color: #ff9900;
+    background-color: #ea8d02;
     width: 100%;
     height: 3.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+  .hamburger-icon {
+    transform: translate(-50%, -50%);
+    width: 40px;
+    margin-top: 40px;
+    margin-left: 40px;
+  }
+
+  .hamburger-icon:before,
+  .hamburger-icon:after,
+  .hamburger-icon div {
+    background: #fff;
+    content: "";
+    display: block;
+    height: 5px;
+    border-radius: 3px;
+    margin: 7px 0;
+    transition: 0.5s;
+  }
+  .hamburger-icon:hover:before {
+    transform: translateY(12px) rotate(135deg);
+  }
+  .hamburger-icon:hover:after {
+    transform: translateY(-12px) rotate(-135deg);
+  }
+  .hamburger-icon:hover div {
+    transform: scale(0);
+  }
+
+nav h1 {
+    font-size: 2.25em;
+    font-family: 'roboto';
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+.login-button{
+    width: 6em;
+    height: 3em;  
+    margin-right: 15px;
+    border-radius: 8px;
 }
 
 .flexContainer {
@@ -18,7 +60,7 @@ body{
     align-content: baseline;
     overflow: auto;
     flex-direction: row;
-    margin: 2rem 2rem 2rem 2rem;
+    margin: 2rem;
 }
 
 .flexContainer div {
@@ -26,6 +68,14 @@ body{
     height: 9rem;
     margin: 30px;
     background-color: #ffffff;
-    border: solid 5px #ff9900;
+    border: solid 5px #ea8d02;
     border-radius: 25px;
+    box-shadow: 10px 10px 30px 10px #00000076;
+    transition: 0.3s;
+}
+
+.flexContainer div:hover {
+    border: solid 5px rgba(0, 0, 0, 0.865);
+    box-shadow: none;
+    transition: 0.2s;
 }
